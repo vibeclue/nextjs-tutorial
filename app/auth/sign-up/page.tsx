@@ -37,7 +37,10 @@ export default function SignUpPage() {
 							render={({field, fieldState}) => (
 								<Field>
 									<FieldLabel>Full name</FieldLabel>
-									<Input placeholder="Petia Pupkin" {...field} />
+									<Input aria-invalid={fieldState.invalid} 
+												 placeholder="Petia Pupkin" 
+												 {...field} 
+									/>
 									{fieldState.invalid && (
 										<FieldError errors={[fieldState.error]} />
 									)}
@@ -50,7 +53,11 @@ export default function SignUpPage() {
 							render={({field, fieldState}) => (
 								<Field>
 									<FieldLabel>Email</FieldLabel>
-									<Input placeholder="email@gmail.com" type="email" {...field} />
+									<Input aria-invalid={fieldState.invalid}
+												 placeholder="email@gmail.com" 
+												 type="email" 
+												 {...field} 
+									/>
 									{fieldState.invalid && (
 										<FieldError errors={[fieldState.error]} />
 									)}
@@ -63,7 +70,11 @@ export default function SignUpPage() {
 							render={({field, fieldState}) => (
 								<Field>
 									<FieldLabel>Password</FieldLabel>
-									<Input placeholder="*****" type="password" {...field} />
+									<Input aria-invalid={fieldState.invalid}
+												 placeholder="*****" 
+												 type="password" 
+												 {...field} 
+									/>
 									{fieldState.invalid && (
 										<FieldError errors={[fieldState.error]} />
 									)}
